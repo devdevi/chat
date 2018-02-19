@@ -1,0 +1,41 @@
+[debug] [2018-02-19T15:01:28.247Z] ----------------------------------------------------------------------
+[debug] [2018-02-19T15:01:28.250Z] Command:       /usr/bin/nodejs /home/laboratoria/.npm-global/bin/firebase serve
+[debug] [2018-02-19T15:01:28.251Z] CLI Version:   3.17.4
+[debug] [2018-02-19T15:01:28.251Z] Platform:      linux
+[debug] [2018-02-19T15:01:28.251Z] Node Version:  v7.10.1
+[debug] [2018-02-19T15:01:28.251Z] Time:          Mon Feb 19 2018 12:01:28 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:28.251Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-19T15:01:28.263Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-19T15:01:28.263Z] > authorizing via signed-in user
+[debug] [2018-02-19T15:01:28.265Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-19T15:01:28.266Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/PlDCZ_LKeJqsNsB5B5lOrW99l7HoCrN73naKn59fncw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Feb 19 2018 12:01:28 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:28.673Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-19T15:01:28.680Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/trivia-afb17  
+  
+ Mon Feb 19 2018 12:01:28 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:30.123Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-19T15:01:30.125Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/trivia-afb17/tokens  
+  
+ Mon Feb 19 2018 12:01:30 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:30.995Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/laboratoria'...
+[info] 
+[debug] [2018-02-19T15:01:31.001Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/trivia-afb17  
+  
+ Mon Feb 19 2018 12:01:31 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:32.106Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-19T15:01:32.107Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/846153060757/clients/_:getWebAppConfig  
+  
+ Mon Feb 19 2018 12:01:32 GMT-0300 (CLST)
+[debug] [2018-02-19T15:01:32.875Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: firebase use --add
+[info] ✔  hosting: Local server: http://localhost:5000
+

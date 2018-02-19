@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  
+
+  <head>  
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Socket.IO chat</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="section blue">
+ 
+      
+              
+      <div class="container">
+        <ul id="messages"></ul>
+        <form action="">
+            <div class="row valign-wrapper">
+              <div class="input-field col s8">
+              <textarea id="m" class="materialize-textarea" data-length="120"></textarea>
+              <label for="m">Mensaje Nuevo</label>
+              </div>
+              <div class="col s4">
+                <button class="btn waves-effect waves-light blue" type="submit" name="action">Send
+            </button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(function () {
+        var socket = io('http://34.227.11.223:3000');
+        $('form').submit(function() {
+          socket.emit('chat message', $('#m').val());
+          $('#m').val("Visaka: ");
+          return false;
+        });
+        socket.on('chat message', function(msg){
+          $('#messages').append($('<li>').html(`
+               <div class="row valign-wrapper">
+      <div class="col s2">
+         <img class="responsive-img circle result" src="https://scontent.faep3-1.fna.fbcdn.net/v/t1.0-9/21150147_1628442783896442_4889546821466355444_n.jpg?oh=b798082822da823027400d7cdd338188&oe=5B0428BF" alt="">
+      </div>
+      <div class="col s10"><p>${msg}</p></div>
+    </div>
+ 
+             `));
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+      });
+    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  </body>
+</html>
